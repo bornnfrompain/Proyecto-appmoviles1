@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <div>
+    <ion-toolbar>
+      <!-- Agrega la imagen aquí -->
+      <div slot="end">
+        <img width="150px" src="assets/icon/logo-duoc.png" alt="Logo DUOC" class="image-animation">
+      </div>
+    </ion-toolbar>
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-text-center ion_content_center">
+
+
+  <img src="assets/img/DuocBackground.png" class="img-fluid">
+  
+
+  <ion-card class="text-card card-color">
+    <ion-label>
+      <h1 class="text-title">Ingrese sus datos</h1>
+    </ion-label>
+      <ion-item class="item-color">
+        <ion-input [(ngModel)]="correo" type="text" label="Correo" id="Correo"
+        labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item class="item-color">
+        <ion-input [(ngModel)]="password" type="password" label="Contraseña" id="Contraseña"
+        labelPlacement="floating"></ion-input>
+      </ion-item >
+      <div class="alinear-centro">
+        <ion-button (click)="ingresar()">
+          Ingresar
+        </ion-button>
+      </div>
+      <ion-label >
+        <a (click)="goCorreo()">Recuperar Contraseña</a>
+      </ion-label>
+      <br>
+      <ion-label >
+        
+        <a (click)="registro()">Registrarse</a>
+      </ion-label>
+    </ion-card>
+</ion-content>
+
+
+
+<ion-footer>
+  <ion-toolbar class="footer-style">
+    <div slot="start">
+      <div class="footer-animation">
+        Sistema de asistencia DuocUc
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>

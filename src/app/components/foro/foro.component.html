@@ -1,0 +1,55 @@
+<ion-content [fullscreen]="true">
+  <img src="assets/img/DuocBackground.png" class="img-fluid">
+  
+  <a #topOfPage href="#topOfPage"></a>
+
+  <ion-card class="card-color item-color">
+
+    <ion-card-header>
+      <ion-card-title class="text-title" style="color: white;">Ingresa tu publicación</ion-card-title>
+    </ion-card-header>
+
+    <ion-item>
+      <ion-input [(ngModel)]="publicacion.titulo" label="Título" labelPlacement="floating"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-textarea [(ngModel)]="publicacion.contenido" label="Contenido" labelPlacement="floating"></ion-textarea>
+    </ion-item>
+
+    <div class="alinear-centro">
+      <ion-button (click)="limpiarPublicacion()">Limpiar</ion-button>
+      <ion-button (click)="guardarPublicacion()">Guardar</ion-button>
+    </div>
+
+  </ion-card>
+  <div class="text-title">
+    <h1  style="font-family: fantasy;">Publicacion recientes</h1>
+  </div>
+  <ion-card *ngFor="let pub of publicaciones">
+
+    <ion-card-header>
+      <h4>
+        #{{ pub.id }}: {{ pub.titulo }} <br>
+        Autor: {{ pub.nombre }} {{ pub.apellido }}
+      </h4>
+      
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{ pub.contenido }}
+    </ion-card-content>
+
+    <div class="alinear-derecha">
+      <ion-button (click)="editarPublicacion(pub)">
+        <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="eliminarPublicacion(pub)">
+        <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+      </ion-button>
+    </div>
+
+  </ion-card>
+
+</ion-content>

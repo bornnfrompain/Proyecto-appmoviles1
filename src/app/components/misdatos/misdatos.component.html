@@ -1,0 +1,45 @@
+<div class="marco">
+  <img src="assets/img/DuocBackground.png" class="img-fluid">
+  
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="usuario.nombre" label="Nombre" labelplacement="floating"></ion-input>
+    <ion-icon name="person-outline" slot="start"></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="usuario.apellido" label="Apellidos" labelplacement="floating"></ion-input>
+    <ion-icon name="person-outline" slot="start"></ion-icon>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="usuario.correo" label="Correo" labelplacement="floating"></ion-input>
+    <ion-icon name="mail-outline" slot="start"></ion-icon>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="usuario.preguntaSecreta" label="Pregunta secreta" labelplacement="floating"></ion-input>
+    <ion-icon name="key-outline" slot="start"></ion-icon>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="usuario.respuestaSecreta" label="Respuesta secreta" labelplacement="floating"></ion-input>
+    <ion-icon name="key-outline" slot="start"></ion-icon>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="password" [(ngModel)]="usuario.password" label="Contraseña" labelplacement="floating"></ion-input>
+    <ion-icon name="key-outline" slot="start"></ion-icon>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="password" [(ngModel)]="repeticionPassword" label="Repetir contraseña" labelplacement="floating"></ion-input>
+    <ion-icon name="key-outline" slot="start"></ion-icon>
+  </ion-item>
+
+  <br>
+  <div class="centrar-boton">
+    <ion-button (click)="actualizarPerfil()">
+      Actualizar mis datos
+    </ion-button>
+  </div>
+
+</div>

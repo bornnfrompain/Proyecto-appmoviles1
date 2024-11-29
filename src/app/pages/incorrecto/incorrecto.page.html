@@ -1,0 +1,47 @@
+<ion-header>
+  <div>
+    <ion-toolbar>
+      <!-- Agrega la imagen aquí -->
+      <div slot="end">
+        <img width="150px" src="assets/icon/logo-duoc.png" alt="Logo DUOC" class="image-animation">
+      </div>
+    </ion-toolbar>
+  </div>
+</ion-header>
+
+
+<ion-content [fullscreen]="true" class="ion-padding-horizontal ion_content_center">
+  <!--Imagen de fondo-->
+  <img src="assets/img/DuocBackground.png" class="img-fluid">
+  
+  <ion-card class="ion-text-center">
+    
+    <ion-card-content>
+      <ion-title size="large">
+        <h1>Recuperar <br> Contraseña</h1>
+      </ion-title>
+
+        <img src="assets/img/pulgar_abajo.png" />
+
+      <ion-label>
+        <h2><ion-icon name="warning"></ion-icon>Incorrecto<ion-icon name="warning"></ion-icon></h2>
+      </ion-label>
+      
+      
+        <ion-button (click)="goBack()">Volver</ion-button>
+      
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="footer-style">
+    <div slot="start">
+      <div class="footer-animation">
+        Sistema de asistencia DuocUc
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>

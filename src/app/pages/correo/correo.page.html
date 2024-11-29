@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <!--Imagen-->
+    <div slot="end">
+      <img width="150px" src="assets/icon/logo-duoc.png" alt="Logo DUOC" class="image-animation">
+    </div>
+    <ion-buttons slot="start">
+      <ion-back-button text="volver" class="title-animation"></ion-back-button>
+    </ion-buttons>
+    
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content >
+  <img src="assets/img/DuocBackground.png" class="img-fluid">
+  
+  <div class="centrado-vertical" >
+    <ion-card class="card-color item-color">
+      <ion-title class="text-title">
+        <h2>PASO 1</h2>
+        <h2>Ingresa tu correo</h2>
+        <br>
+      </ion-title>
+      <ion-item class="item-color">
+        <ion-input label="Correo:" placeholder="Ingresa tu correo"
+        labelplacement="floating" [(ngModel)]="correo"></ion-input>
+      </ion-item>
+    
+      <ion-row>
+        <ion-col size="12">
+          <br>
+          <ion-button shape="block" (click)="recuperarContrasena()">Recuperar Contraseña</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="footer-style">
+    <div slot="start">
+      <div class="footer-animation">
+        Sistema de asistencia DuocUc
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>
